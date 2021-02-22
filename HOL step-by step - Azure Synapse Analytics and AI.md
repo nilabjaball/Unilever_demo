@@ -229,7 +229,20 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
 13.   Storage Key as jwaRHZ1BRDeg/hIyJuZlL0y3tigGrtepi1AnvctgH0EnXQrlCOWnE3QNw7UpPkfqRvJ4vWfngxSQrkMbps+v1Q==
 14.   Click Test Connection. If successful, click create. 
 
-The linked service got created.!!!
+The ADLS linked service got created.!!!
+
+Similarly , create a linked service SQLPool01 for the SQL dedicated Pool.
+   | Field | Value |
+   |-------|-------|
+   | Source Type  | Enter **Azure Synapse Analytics**. |
+   | Linked service Name | **SQLPool01**|
+   | FQDN Name | Enter **`workspacename.sql.azuresynapse.net**. |
+   | Database Name | Enter **SQLPool01**. |
+   | SQL User | Enter **sqladminuser**. |
+   | Password | ******* |
+  
+![The query tab toolbar is displayed with the Run button selected.](media/sqlpoolls.PNG "Running the query")
+
 
 
 
