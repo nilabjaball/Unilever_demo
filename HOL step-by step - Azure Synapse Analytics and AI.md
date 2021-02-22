@@ -179,6 +179,8 @@ Table design performance considerations
 
 Over the past 5 years, Wide World Importers has amassed over 3 billion rows of sales data. With this quantity of data, the customer information lookup table is estimated to have over 100 million rows but will consume less than 1.5 GB of storage. While we will be using only a subset of this data for the lab, we will design the table for the production environment. Using the guidance outlined in the Exercising description, we can ascertain that we will need a **Clustered Columnstore** table with a **Replicated** table distribution to hold customer data.
 
+
+
 1. Expand the left menu and select the **Develop** item. From the **Develop** blade, expand the **+** button and select the **SQL script** item.
 
     ![The left menu is expanded with the Develop item selected. The Develop blade has the + button expanded with the SQL script item highlighted.](media/develop_newsqlscript_menu.png "Adding a SQL script")
@@ -214,6 +216,22 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
 4. From the top toolbar, select the **Discard all** button as we will not be saving this query. When prompted, choose to **Discard changes**.
 
    ![The top toolbar menu is displayed with the Discard all button highlighted.](media/toptoolbar_discardall.png "Discard all changes")
+
+5. Once the table is created, lets do the prepare activity of populating the table. i.e, creating a linked service
+6. Go to Manage ( Toolbox icon) and click on linked services.
+ ![The query tab toolbar is displayed with the Run button selected.](media/ls.png "Running the query") 
+7.    Click new and type Gen2. We need to create a ADLS Gen2 linked service to read the data from the file system.
+        ![The query tab toolbar is displayed with the Run button selected.](media/gen2.png "Running the query") 
+9.    Provide the Name of the linked service as **asadatalakenbl** 
+      ![The query tab toolbar is displayed with the Run button selected.](media/asadatalakenbl.PNG "Running the query")
+11.    Under account selection, select manual
+12.   Provide endpoint URL as https://asadatalakenbl.dfs.core.windows.net ( Ensure no whitespace at end)
+13.   Storage Key as jwaRHZ1BRDeg/hIyJuZlL0y3tigGrtepi1AnvctgH0EnXQrlCOWnE3QNw7UpPkfqRvJ4vWfngxSQrkMbps+v1Q==
+14.   Click Test Connection. If successful, click create. 
+
+The linked service got created.!!!
+
+
 
 ### Task 2: Populate the customer information table
 
