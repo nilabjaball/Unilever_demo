@@ -236,11 +236,13 @@ Similarly , create a linked service SQLPool01 for the SQL dedicated Pool.
    |-------|-------|
    | Source Type  | Enter **Azure Synapse Analytics**. |
    | Linked service Name | **SQLPool01**|
-   | FQDN Name | Enter **`workspacename.sql.azuresynapse.net**. |
+   | FQDN Name | Enter **`asaworkspace{suffix}`.sql.azuresynapse.net**. |
    | Database Name | Enter **SQLPool01**. |
    | SQL User | Enter **sqladminuser**. |
    | Password | ******* |
-  
+ 
+ 
+ 
 ![The query tab toolbar is displayed with the Run button selected.](media/sqlpoolls.PNG "Running the query")
 
 
