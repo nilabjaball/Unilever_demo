@@ -34,7 +34,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Before the hands-on lab](#before-the-hands-on-lab)
   - [Resource naming throughout this lab](#resource-naming-throughout-this-lab)
   - [Exercise 1: Accessing the Azure Synapse Analytics workspace](#exercise-1-accessing-the-azure-synapse-analytics-workspace)
-    - [Task 1 : Create Azure Synapse Workspace ]
+    - [Task 1 : Create Azure Synapse Workspace]
     - [Task 2: Launching Synapse Studio](#task-1-launching-synapse-studio)
   - [Exercise 2: Create and populate the supporting tables in the SQL Pool](#exercise-2-create-and-populate-the-supporting-tables-in-the-sql-pool)
     - [Task 1: Create the customer information table](#task-3-create-the-customer-information-table)
@@ -52,7 +52,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Exercise 5: Publish PowerBI Report](#exercise-5-synapse-pipelines-and-cognitive-search-optional)
     - [Task 1: Create the PowerBI Report using Synapse Serverless ](#task-1-create-the-invoice-storage-container)
     - [Task 2: Publish the report](#task-2-create-and-train-an-azure-forms-recognizer-model-and-setup-cognitive-search)
-  - [Exercise 6: Purview](#exercise-6-security)
+  - [Exercise 6: Purview (Optional)](#exercise-6-security)
     - [Task 1: Create Purview](#task-1-column-level-security)
     - [Task 2: Register and Scan Campiagn and customer info tables](#task-2-row-level-security)
     - [Task 3: Register to Synapse Workspace and Create a query](#task-3-dynamic-data-masking)
