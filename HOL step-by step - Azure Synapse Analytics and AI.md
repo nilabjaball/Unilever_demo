@@ -118,14 +118,16 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
     ![In the resource list, the Synapse Workspace item is selected.](media/rg_group.PNG "The resource group listing")
 4. Once the resource group is created, the next step is to create **Synapse Workspace** resource 
 5. Go to Create Resource and search for **Azure Synapse Analytics**
-6. On the resource creation page, select `WorkspaceResourceGroup` that was created as a part of  step 3.
-7. Provide a unique workspace name `asaworkspace{suffix}`
-8. Select Region as West Europe
-9. Click create new Create a new storage account `asadatalake{suffix}` and file system name `DefaultFileSystem` .
+    ![In the resource list, the Synapse Workspace item is selected.](media/asa_search.PNG "The resource group listing")
+7. On the resource creation page, select `WorkspaceResourceGroup` that was created as a part of  step 3.
+8. Provide a unique workspace name `asaworkspace{suffix}`
+9. Select Region as West Europe
+10. Click create new Create a new storage account `asadatalake{suffix}` and file system name `DefaultFileSystem` .
 
    ![In the resource list, the Synapse Workspace item is selected.](media/synapse_ws.PNG "The resource group listing")
 
-10. CLick next and Provide SQLAdminuser Name password. Eg:Password@123456789
+10. Click security and Provide SQLAdminuser Name password. Eg:Password@123456789.
+11. Click Review and Create. It will take few mins to create the workspace
 
 
 ### Task 2: Launching Synapse Studio
