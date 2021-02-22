@@ -133,6 +133,7 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
 ![In the resource list, the Synapse Workspace item is selected.](media/synapse_pool.PNG "The resource group listing")
 13. Click on SQL Pool, Click new  and provide the Pool Name as `SqlPool01` . Select DWU500 and rest to default. 
 14.  Click review and create.
+
 ![In the resource list, the Synapse Workspace item is selected.](media/sqlpool.PNG "The resource group listing")
 
 ### Task 2: Launching Synapse Studio
