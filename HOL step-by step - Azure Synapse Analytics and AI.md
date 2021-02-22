@@ -128,7 +128,7 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
 
 10. Click security and Provide SQLAdminuser Name password. Eg:Password@123456789.
 11. Click Review and Create. It will take few mins to create the workspace
-
+![In the resource list, the Synapse Workspace item is selected.](media/synapse_progress.PNG "The resource group listing")
 
 ### Task 2: Launching Synapse Studio
 
