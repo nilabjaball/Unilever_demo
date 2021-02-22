@@ -103,7 +103,7 @@ For the remainder of this lab, the following terms will be used for various ASA 
 | SQL Pool                          | `SqlPool01`                                                                        |
 | SQL Serverless Endpoint           | `SqlServerless01`                                                                  |
 | Azure Key Vault                   | `asakeyvault{suffix}`                                                              |
-
+| Initial Suffix                    | `Initial{suffix}`
 ## Exercise 1: Accessing the Azure Synapse Analytics workspace
 
 **Duration**: 15 minutes
@@ -113,8 +113,8 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
 ### Task 1: Create Azure Synapse Workspace
 
 1. Login into the Azure Portal
-2. Create a workspace resource group Synapse-MCW-<InitialSuffix>
-3. 
+2. Create a resource group Synapse-MCW-`Initial{suffix}`
+3. Select Region as West Europe 
 ### Task 2: Launching Synapse Studio
 
 1. Log into the [Azure Portal](https://portal.azure.com).
