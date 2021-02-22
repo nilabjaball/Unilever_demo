@@ -571,6 +571,8 @@ Similar to the customer information table, we will also be populating the campai
 26. Your completed data flow should look similar to the following:
 
     ![The completed data flow is displayed.](media/dataflow_campaignanalytics_complete.png "The completed data flow")
+    
+    Enable Data Flow Debug settings 
   
 27. Select **Publish all** to save your new data flow.
 
