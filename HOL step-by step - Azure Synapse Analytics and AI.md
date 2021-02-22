@@ -65,7 +65,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this hands-on-lab, you will build an end-to-end data analytics with machine learning solution using Azure Synapse Analytics. The information will be presented in the context of a retail scenario. We will be heavily leveraging Azure Synapse Studio, a tool that conveniently unifies the most common data operations from ingestion, transformation, querying, and visualization.
+In this hands-on-lab, you will build an end-to-end data analytics  using Azure Synapse Analytics. The information will be presented in the context of a retail scenario. We will be heavily leveraging Azure Synapse Studio, a tool that conveniently unifies the most common data operations from ingestion, transformation, querying, and visualization.
 
 ## Overview
 
@@ -82,26 +82,11 @@ This lab explores the cold data scenario of ingesting various types of raw data 
 1. Microsoft Azure subscription
 
 2. Azure Synapse Workspace / Studio
-
-3. [Python v.3.7 or newer](https://www.python.org/downloads/)
-
-4. [PIP](https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip)
-
-5. [Visual Studio Code](https://code.visualstudio.com/)
-
-6. [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-7. [Azure Function Core Tools v.3](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#v2)
-
-8. [Azure Functions Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
-
-9. [Postman](https://www.postman.com/downloads/)
-
-10. [Ensure the Microsoft.Sql resource provider is registered in your Azure Subscription](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types). 
+ 
+3. [Ensure the Microsoft.Sql resource provider is registered in your Azure Subscription](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types). 
 
 ## Before the hands-on lab
 
-Refer to the Before the hands-on lab setup guide manual before continuing to the lab exercises.
 
 ## Resource naming throughout this lab
 
@@ -121,11 +106,16 @@ For the remainder of this lab, the following terms will be used for various ASA 
 
 ## Exercise 1: Accessing the Azure Synapse Analytics workspace
 
-**Duration**: 5 minutes
+**Duration**: 15 minutes
 
 All exercises in this lab utilize the workspace Synapse Studio user interface. This exercise will outline the steps to launch Synapse Studio. Unless otherwise specified, all instruction including menu navigation will occur in Synapse Studio.
 
-### Task 1: Launching Synapse Studio
+### Task 1: Create Azure Synapse Workspace
+
+1. Login into the Azure Portal
+2. Create a workspace resource group Synapse-MCW-<InitialSuffix>
+3. 
+### Task 2: Launching Synapse Studio
 
 1. Log into the [Azure Portal](https://portal.azure.com).
 
