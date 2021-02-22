@@ -123,7 +123,7 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
 8. Select Region as West Europe
 9. Click create new Create a new storage account `asadatalake{suffix}` and file system name `DefaultFileSystem` .
 
-   ![The Azure Portal left menu is expanded with the Resource groups item highlighted.](media/synapse_ws.PNG "Azure Portal Resource Groups menu item")
+   ![In the resource list, the Synapse Workspace item is selected.](media/synapse_ws.PNG "The resource group listing")
 
 10. CLick next and Provide SQLAdminuser Name password. Eg:Password@123456789
 
