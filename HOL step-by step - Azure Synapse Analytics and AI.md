@@ -723,8 +723,23 @@ The data that we will be retrieving to populate the sale table is currently stor
    | Linked service | **SQLPool01** |
    | Table name | **wwi_mcw.SaleSmall** |  
    | Import schema | **From connection/store** |
+   
+   
 
     ![The Set properties blade is populated with the values specified in the preceding table.](media/smallsales.PNG "Dataset form")
+
+9.b  Add Another sink 
+
+ | Field | Value |
+   |-------|-------|
+   | Name  | Enter **asamcw_sales_parquet**. |
+   | Linked service | **Primary FIle System** |
+   | Folder Path | **Primary FIle system** |  
+   | Import schema | **From connection/store** |
+   | IputStream Name  | Enter **Deltaoutput**. |
+   | OutputStream Name  | Enter **salesparquet**. |
+   | FIle Type | Enter **parquet** |
+
 
 10. In the top toolbar, select **Publish all** to publish the new dataset definitions. When prompted, select the **Publish** button to deploy the changes to the workspace.
 
@@ -750,6 +765,8 @@ The data that we will be retrieving to populate the sale table is currently stor
     | Staging linked service | **Primary Storage account** |
     | Staging storage folder - Container | Enter **Primary File System Name**. |
     | Staging storage folder - Folder | Enter **blank**. |
+
+
 
     ![The data flow activity Settings tab is displayed with the fields specified in the preceding table highlighted.](media/pipeline_sales_dataflowsettings.png "Data flow activity settings")
 
