@@ -684,32 +684,36 @@ The data that we will be retrieving to populate the sale table is currently stor
     Sample path to the parquet folder for January 1, 2019:
     /wwi-02/sale-small/Year=2019/Quarter=Q1/Month=1/Day=20190101/sale-small-20190101-snappy.parquet
     ```
+3. Go to Develop and click on Data Flow 
+ ![In the Select format screen, the Parquet item is highlighted.](media/dflow.PNG "Selecting Parquet")
+ 
 
-3. Create a new Dataset by selecting **Data** from the left menu, expanding the **+** button on the Data blade and selecting **Integration Dataset**. We will be creating a dataset that will point to the root folder of the sales data in the data lake.
+3. Enter the name of the Dataflow **ASAMCW_Exercise_2_2018_and_2019_Sales**
 
-4. In the **New integration dataset** blade, with the **All** tab selected, choose the **Azure Data Lake Storage Gen2** item. Select **Continue**.
+4. Click on Add source 
 
-    ![The New dataset blade is displayed with the All tab selected, the Azure Data Lake Storage Gen2 item is selected from the list.](media/new_dataset_type_selection.png "Defining a new Dataset")
-
-5. In the **Select format** screen, choose the **Parquet** item. Select **Continue**.
-
-    ![In the Select format screen, the Parquet item is highlighted.](media/dataset_format_parquet.png "Selecting Parquet")
-
-6. In the **Set properties** blade, populate the form as follows then select **OK**.
-  
    | Field | Value |
    |-------|-------|
-   | Name  | Enter **asamcw_sales_parquet**. |
-   | Linked service | **asadatalake{SUFFIX}** |
-   | File path - Container | Enter **wwi-02**. |  
-   | File path - Folder | Enter **sale-small**. |
-   | Import schema | **From connection/store** |
+   | OutputStream Name  | Enter **Deltaoutput**. |
+   | Source Type | **Delta** |
+   | Linked Service | Enter **asadatalakenbl**. |  
+   
+ 5. Under source settings, Folder Name = **Staging**
 
-    ![The Set properties blade is displayed with fields populated with the values from the preceding table.](media/dataset_salesparquet_propertiesform.png "Dataset form")
+    ![The Set properties blade is displayed with fields populated with the values from the preceding table.](media/deltaoutput.PNG "Dataset form")
+    
+ 6. Next, add sink.
+
+ | Field | Value |
+   |-------|-------|
+   | InputStream Name  | Enter **Deltaoutput**. |
+   | OutputStream Name  | Enter **salestbl**. |
+   | Source Type | **Dataset** |
+   | Linked Service | Enter **+ New**. |  
 
 7. Now we will need to define the destination dataset for our data. In this case we will be storing sale data in our SQL Pool. Create a new dataset by expanding the **+** button on the **Data** blade and selecting **Integration dataset**.
 
-8. On the **New integration dataset** blade, with the **Azure** tab selected, enter **synapse** as a search term and select the **Azure Synapse Analytics (formerly SQL DW)** item. Select **Continue**.
+8. On the **New dataset ** blade, with the **Azure** tab selected, enter **Azure synapse Analytics** as a search term. Select **Continue**.
   
 9. On the **Set properties** blade, set the field values to the following, then select **OK**.
 
@@ -720,7 +724,7 @@ The data that we will be retrieving to populate the sale table is currently stor
    | Table name | **wwi_mcw.SaleSmall** |  
    | Import schema | **From connection/store** |
 
-    ![The Set properties blade is populated with the values specified in the preceding table.](media/dataset_saleasaform.png "Dataset form")
+    ![The Set properties blade is populated with the values specified in the preceding table.](media/smallsales.PNG "Dataset form")
 
 10. In the top toolbar, select **Publish all** to publish the new dataset definitions. When prompted, select the **Publish** button to deploy the changes to the workspace.
 
