@@ -115,7 +115,7 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
 1. Login into the Azure Portal
 2. Create a resource group Synapse-MCW-`Initial{suffix}`
 3. Select Region as West Europe 
-   (media/rg_group.png)
+   (media/rg_group.PNG)
 ### Task 2: Launching Synapse Studio
 
 1. Log into the [Azure Portal](https://portal.azure.com).
