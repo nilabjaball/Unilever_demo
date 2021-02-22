@@ -114,8 +114,20 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
 
 1. Login into the Azure Portal
 2. Create a resource group Synapse-MCW-`Initial{suffix}`
-3. Select Region as West Europe 
+3. Select Region as West Europe and click review and create
     ![In the resource list, the Synapse Workspace item is selected.](media/rg_group.PNG "The resource group listing")
+4. Once the resource group is created, the next step is to create **Synapse Workspace** resource 
+5. Go to Create Resource and search for **Azure Synapse Analytics**
+6. On the resource creation page, select `WorkspaceResourceGroup` that was created as a part of  step 3.
+7. Provide a unique workspace name `asaworkspace{suffix}`
+8. Select Region as West Europe
+9. Click create new Create a new storage account `asadatalake{suffix}` and file system name `DefaultFileSystem` .
+
+   ![The Azure Portal left menu is expanded with the Resource groups item highlighted.](media/synapse_ws.PNG "Azure Portal Resource Groups menu item")
+
+10. CLick next and Provide SQLAdminuser Name password. Eg:Password@123456789
+
+
 ### Task 2: Launching Synapse Studio
 
 1. Log into the [Azure Portal](https://portal.azure.com).
