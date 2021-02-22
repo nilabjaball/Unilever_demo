@@ -593,8 +593,8 @@ Similar to the customer information table, we will also be populating the campai
     | Field | Value |
     |-------|-------|
     | Data flow  | **ASAMCW_Exercise_2_Campaign_Analytics_Data** |
-    | Staging linked service | **workspaceadls** |
-    | Staging storage folder - Container | Enter **file system name**. |
+    | Staging linked service | **Primary Storage Account** |
+    | Staging storage folder - Container | Enter **Default file system name**. |
     | Staging storage folder - Directory | Leave **blank**. |
 
     ![The data flow activity Settings tab is displayed with the fields specified in the preceding table highlighted.](media/pipeline_campaigndata_dataflowsettings.png "Configuring the data flow activity")
