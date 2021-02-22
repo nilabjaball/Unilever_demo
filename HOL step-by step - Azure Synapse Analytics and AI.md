@@ -127,8 +127,13 @@ All exercises in this lab utilize the workspace Synapse Studio user interface. T
    ![In the resource list, the Synapse Workspace item is selected.](media/synapse_ws.PNG "The resource group listing")
 
 10. Click security and Provide SQLAdminuser Name password. Eg:Password@123456789.
-11. Click Review and Create. It will take few mins to create the workspace
+11. Click Review and Create. It will take usually 5-6 minutes to create the workspace.
 ![In the resource list, the Synapse Workspace item is selected.](media/synapse_progress.PNG "The resource group listing")
+12. Once the workspace is created, observe the synapse settings. Next step, is to create SQL Pool
+![In the resource list, the Synapse Workspace item is selected.](media/synapse_pool.PNG "The resource group listing")
+13. Click on SQL Pool, Click new  and provide the Pool Name as `SqlPool01` . Select DWU500 and rest to default. 
+14.  Click review and create.
+![In the resource list, the Synapse Workspace item is selected.](media/sqlpool.PNG "The resource group listing")
 
 ### Task 2: Launching Synapse Studio
 
