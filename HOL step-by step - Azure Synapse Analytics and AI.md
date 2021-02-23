@@ -961,9 +961,7 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
   8. Publish the power BI report in your workspace ( In your tenant , not lab tenant)
    Preview section, select Sales and then load data.
   ![The connect to option is highlighted in the query toolbar.](media/card.PNG "Query toolbar")
-## After the hands-on lab
 
-**Duration**: 5 minutes
 
 ## Exercise 5:  Purview (Optional)
 
@@ -977,14 +975,27 @@ Duration : 20 mins
 Create Purview Account
 
 1. Go to Azure Portal -->  Create New  Resource and enter Azure Purview
-2. Provide the purview name, resource group name and region 
+2. Provide the purview name, resource group name and region
+3. Click Review and create. Wait for the resource to get created. 
 
  ![The connect to option is highlighted in the query toolbar.](media/purview.PNG "Query toolbar")
 
+### Task 2: Link Synapse workspace to purview
+
+1.Go to Synapse worksapce --> Manage
+2.Click on Purview( Preview)
+3. Link the Purview account that you created in Task 1.
+ ![The connect to option is highlighted in the query toolbar.](media/purviewlink.PNG "Query toolbar")
 
 
-### Task 2: Register Asset 
 
+
+
+
+
+## After the hands-on lab
+
+**Duration**: 5 minutes
 
 ### Task 1: Delete the resource group
 
