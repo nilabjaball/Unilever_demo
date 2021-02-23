@@ -698,7 +698,7 @@ The data that we will be retrieving to populate the sale table is currently stor
    | Source Type | **Delta** |
    | Linked Service | Enter **asadatalakenbl**. |  
    
- 5. Under source settings, Folder Name = **Staging**
+ 5. Under **source options**, select Folder Name = **Staging**
 
     ![The Set properties blade is displayed with fields populated with the values from the preceding table.](media/deltaoutput.PNG "Dataset form")
     
@@ -728,12 +728,12 @@ The data that we will be retrieving to populate the sale table is currently stor
 
     ![The Set properties blade is populated with the values specified in the preceding table.](media/smallsales.PNG "Dataset form")
 
-9.b  Add Another sink 
+9.b  Add Another sink of converting delta to spark table
 
  | Field | Value |
    |-------|-------|
    | Name  | Enter **asamcw_sales_parquet**. |
-   | Linked service | **Primary FIle System** |
+   | Linked service | **Primary File System** |
    | Folder Path | **Primary FIle system** |  
    | Import schema | **From connection/store** |
    | IputStream Name  | Enter **Deltaoutput**. |
