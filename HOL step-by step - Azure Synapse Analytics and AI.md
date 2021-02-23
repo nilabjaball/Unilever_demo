@@ -728,7 +728,7 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
    |-------|-------|
    | Name  | Enter **asamcw_sales_parquet**. |
    | Linked service | **Primary storage account** |
-   | Folder Path | **Primary FIle system** |  
+   | Folder Path | **Primary File system/Sales** |  
    | Import schema | **From connection/store** |
    | IputStream Name  | Enter **Deltaoutput**. |
    | OutputStream Name  | Enter **salesparquet**. |
