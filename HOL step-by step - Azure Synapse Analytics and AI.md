@@ -51,8 +51,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 2: Publish the report](#task-2-create-and-train-an-azure-forms-recognizer-model-and-setup-cognitive-search)
   - [Exercise 5: Purview (Optional)](#exercise-6-security)
     - [Task 1: Create Purview](#task-1-column-level-security)
-    - [Task 2: Register and Scan Campiagn and customer info tables](#task-2-row-level-security)
-    - [Task 3: Register to Synapse Workspace and Create a query](#task-3-dynamic-data-masking)
+    - [Task 2: Link Synapse workspace to purview](#task-2-row-level-security)
+    - [Task 3: Browse Catalog and explore ](#task-3-dynamic-data-masking)
 
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Delete the resource group](#task-1-delete-the-resource-group)
@@ -979,19 +979,24 @@ Create Purview Account
 3. Click Review and create. Wait for the resource to get created. 
 
  ![The connect to option is highlighted in the query toolbar.](media/purview.PNG "Query toolbar")
+ 
+ You can use **DUMMY PURVIEW ACCOUNT**. Ask Instructor 
 
 ### Task 2: Link Synapse workspace to purview
 
 1.Go to Synapse worksapce --> Manage
 2.Click on Purview( Preview)
-3. Link the Purview account that you created in Task 1.
+3. Link the Purview account that you created in Task 1 or use dummy purview account 
  ![The connect to option is highlighted in the query toolbar.](media/purviewlink.PNG "Query toolbar")
 
+### Task 3: Browse Catalog and explore 
 
-
-
-
-
+1. Go to Synapse workspace
+2. Go to Data and on top search select Purview
+3. Type *
+4. Click on the dataset (casrprice.csv)
+5. Click Develop - Select SQL
+6. RUn query to view the data 
 
 ## After the hands-on lab
 
