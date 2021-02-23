@@ -948,13 +948,13 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
     ![The connect to option is highlighted in the query toolbar.](media/location.PNG "Query toolbar")
 
 
-### Task 1: Publish Report 
+### Task 2: Publish Report 
 
  1. Open PowerBI Desktop in your workstation
  2. Click Get Data and select Azure | Azure SQL Database
  3. In Servername , Enter **{WorkspaceName}--ondemand.sql.azuresynapse.net**, Database Name Enter **demo**
   ![The connect to option is highlighted in the query toolbar.](media/ondemand.PNG "Query toolbar")
- 5. Provide the user name use ogranizational account and login using the account.
+ 5. Provide the user name use ogranizational account  ( demo lab account ) and login using the account.
  6. Under Preview section, select Sales and then load data.
   ![The connect to option is highlighted in the query toolbar.](media/salespreview.PNG "Query toolbar")
   7. Add a viuslization **card** and drag [ProfitAmount] . Select aggregate type as sum
@@ -964,6 +964,27 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
 ## After the hands-on lab
 
 **Duration**: 5 minutes
+
+## Exercise 5:  Purview (Optional)
+
+Duration : 20 mins
+### Task 1: Create Purview Account and Link to Azure Synapse 
+
+ **Pre-requisites** 
+
+**Register Microsoft.Storage and Microsoft.Eventhub**
+
+Create Purview Account
+
+1. Go to Azure Portal -->  Create New  Resource and enter Azure Purview
+2. Provide the purview name, resource group name and region 
+
+ ![The connect to option is highlighted in the query toolbar.](media/purview.PNG "Query toolbar")
+
+
+
+### Task 2: Register Asset 
+
 
 ### Task 1: Delete the resource group
 
