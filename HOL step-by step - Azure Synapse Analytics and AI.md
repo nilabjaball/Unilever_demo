@@ -823,7 +823,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
    ```
 
 
-    ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/top100.png "SQL on-demand")
+   ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/top100.PNG "SQL on-demand")
 
 4. Ensure the **Built-in** Synapse SQL Serverless pool is selected in the **Connect to** dropdown list above the query window, then run the query. Data is loaded by the Synapse SQL Serverless endpoint and processed as if was coming from any regular relational database.
 
@@ -843,22 +843,21 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
             FORMAT='PARQUET'
         ) AS [r] GROUP BY r.TransactionDate, r.ProductId;
     ```
+![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/groupby.png "SQL on-demand")
 
-    ![The T-SQL query above is displayed within the query window.](media/sql-serverless-aggregates.png "Query window")
-
-7. Now let's figure out how many records are contained within the Parquet files for sales data. This information is important for planning how we optimize for importing the data into Azure Synapse Analytics. To do this, replace your query with the following (be sure to update the name of your data lake in BULK statement, by replacing `asadatalake{SUFFIX}`):
+7. Now let's figure out how many records are contained within the Parquet files for sales data. This information is important for planning how we optimize for importing the data into Azure Synapse Analytics. To do this, replace your query with the following (be sure to update the name of your data lake in BULK statement, by replacing with your ADLS account):
 
     ```sql
     SELECT
         COUNT_BIG(*)
     FROM
         OPENROWSET(
-            BULK 'https://{Primarystorageaccount}.dfs.core.windows.net/wwi-02/sales/*',
+            BULK 'https://{Primarystorageaccount}.dfs.core.windows.net/{FilesystemName}/sales/*',
             FORMAT='PARQUET'
         ) AS [r];
     ```
 
-    > Notice how we updated the path to include all Parquet files in all subfolders of `sale-small/Year=2019`.
+  
 
     
 ### Task 2: Query sales Parquet data with Azure Synapse Spark
