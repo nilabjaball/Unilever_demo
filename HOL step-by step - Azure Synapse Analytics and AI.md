@@ -669,21 +669,11 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
 
 >&#x1F534; **Note**: This task involves a long data loading activity (approximately 45 minutes in duration). Once you have triggered the pipeline, please continue to the next task.
 
-The data that we will be retrieving to populate the sale table is currently stored as a series of delta  in the **asadatalakenbl** data lake (Azure Data Lake Storage Gen 2). This storage account has already been added as a linked service in Azure Synapse Analytics w. Linked Services are synonymous with connection strings in Azure Synapse Analytics. Azure Synapse Analytics linked services provides the ability to connect to nearly 100 different types of external services ranging from Azure Storage Accounts to Amazon S3 and more.
+1. The data that we will be retrieving to populate the sale table is currently stored as a series of delta  in the **asadatalakenbl** data lake (Azure Data Lake Storage Gen 2. This storage account has already been added as a linked service in Azure Synapse Analytics w. Linked Services are synonymous with connection strings in Azure Synapse Analytics. Azure Synapse Analytics linked services provides the ability to connect to nearly 100 different types of external services ranging from Azure Storage Accounts to Amazon S3 and more.
 
-1. Review the presence of the **asadatalakenbl** linked service, by selecting **Manage** from the left menu, and selecting **Linked services** from the blade menu. Filter the linked services by the term **asadatalake** to find the **asadatalakenbl** item. Further investigating this item will unveil that it makes a connection to the storage account using a storage account key.
-  
-
-2. The sale data for each day is stored in a separate parquet file which is placed in storage following a known convention. In this lab, we are interested in populating the Sale table with only 2018 and 2019 data. Investigate the structure of the data by selecting the **Data** tab, and in the **Data** pane, select the **Linked** tab, expanding the **Azure Data Lake Storage Gen 2** item, and expanding the `asadatalake{SUFFIX}` Storage account.
-
-    > **Note**: The current folder structure for daily sales data is as follows: 
-    /wwi-02/sale-small/Year=`YYYY`/Quarter=`Q#`/Month=`M`/Day=`YYYYMMDD`, where `YYYY` is the 4 digit year (eg. 2019), `Q#` represents the quarter (eg. Q1), `M` represents the numerical month (eg. 1 for January) and finally `YYYYMMDD` represents a numeric date format representation (eg. `20190516` for May 16, 2019).
-    > A single parquet file is stored each day folder with the name **sale-small-YYYYMMDD-snappy.parquet** (replacing `YYYYMMDD` with the numeric date representation).
-
-    ```text
-    Sample path to the parquet folder for January 1, 2019:
-    /wwi-02/sale-small/Year=2019/Quarter=Q1/Month=1/Day=20190101/sale-small-20190101-snappy.parquet
-    ```
+2. Go to Data | Linked and double click on the  ADLS Gen2. Then, select the primary account. Inside the folder,  click new folder and give the name sales.
+    ![In the Select format screen, the Parquet item is highlighted.](media/newfolder.PNG "Selecting Parquet")
+   
 3. Go to Develop and click on Data Flow 
  ![In the Select format screen, the Parquet item is highlighted.](media/dflow.PNG "Selecting Parquet")
  
