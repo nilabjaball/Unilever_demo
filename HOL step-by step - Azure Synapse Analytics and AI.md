@@ -733,14 +733,14 @@ The data that we will be retrieving to populate the sale table is currently stor
  | Field | Value |
    |-------|-------|
    | Name  | Enter **asamcw_sales_parquet**. |
-   | Linked service | **Primary File System** |
+   | Linked service | **Primary storage account** |
    | Folder Path | **Primary FIle system** |  
    | Import schema | **From connection/store** |
    | IputStream Name  | Enter **Deltaoutput**. |
    | OutputStream Name  | Enter **salesparquet**. |
    | FIle Type | Enter **parquet** |
 
-
+![The Set properties blade is populated with the values specified in the preceding table.](media/dual.PNG "Dataset form")
 10. In the top toolbar, select **Publish all** to publish the new dataset definitions. When prompted, select the **Publish** button to deploy the changes to the workspace.
 
     ![The top toolbar is displayed with the Publish all button highlighted.](media/publishall_toolbarmenu.png "Publish changes")
