@@ -996,7 +996,7 @@ Create Purview Account
 3. Type *
 4. Click on the dataset (casrprice.csv)
 5. Click Develop - Select SQL
- ![The connect to option is highlighted in the query toolbar.](media/synapsepurviewlink.PNG "Query toolbar")
+ ![The connect to option is highlighted in the query toolbar.](media/synapselinkpurview.PNG "Query toolbar")
 7. Run query to view the data 
 
 ## After the hands-on lab
