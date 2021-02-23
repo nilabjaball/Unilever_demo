@@ -635,34 +635,34 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
 
     ```sql
    SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+	GO
+	SET QUOTED_IDENTIFIER ON
+	GO
 
-CREATE TABLE [wwi_mcw].[SaleSmall]
-( 
-	[TransactionId] [uniqueidentifier]  NULL,
-	[CustomerId] [int]  NULL,
-	[ProductId] [smallint]  NULL,
-	[Quantity] [tinyint]  NULL,
-	[Price] [decimal](9,2)  NULL,
-	[TotalAmount] [decimal](9,2)  NULL,
-	[TransactionDateId] [int]  NULL,
-	[ProfitAmount] [decimal](9,2)  NULL,
-	[Hour] [tinyint]  NULL,
-	[Minute] [tinyint]  NULL,
-	[StoreId] [smallint]  NULL
-)
-WITH
-(
-	DISTRIBUTION = HASH ( [CustomerId] ),
-	CLUSTERED COLUMNSTORE INDEX,
-	PARTITION
-	(
-		[TransactionDateId] RANGE RIGHT FOR VALUES (20180101, 20180201, 20180301, 20180401, 20180501, 20180601, 20180701, 20180801, 20180901, 20181001, 20181101, 20181201, 20190101, 20190201, 20190301, 20190401, 20190501, 20190601, 20190701, 20190801, 20190901, 20191001, 20191101, 20191201)
+	CREATE TABLE [wwi_mcw].[SaleSmall]
+	( 
+		[TransactionId] [uniqueidentifier]  NULL,
+		[CustomerId] [int]  NULL,
+		[ProductId] [smallint]  NULL,
+		[Quantity] [tinyint]  NULL,
+		[Price] [decimal](9,2)  NULL,
+		[TotalAmount] [decimal](9,2)  NULL,
+		[TransactionDateId] [int]  NULL,
+		[ProfitAmount] [decimal](9,2)  NULL,
+		[Hour] [tinyint]  NULL,
+		[Minute] [tinyint]  NULL,
+		[StoreId] [smallint]  NULL
 	)
-)
-GO
+	WITH
+	(
+		DISTRIBUTION = HASH ( [CustomerId] ),
+		CLUSTERED COLUMNSTORE INDEX,
+		PARTITION
+		(
+			[TransactionDateId] RANGE RIGHT FOR VALUES (20180101, 20180201, 20180301, 20180401, 20180501, 20180601, 20180701, 20180801, 20180901, 20181001, 20181101, 20181201, 20190101, 20190201, 20190301, 20190401, 20190501, 20190601, 20190701, 20190801, 20190901, 20191001, 20191101, 20191201)
+		)
+	)
+	GO
     ```
 
 4. From the top toolbar, select the **Discard all** button as we will not be saving this query. When prompted, choose to **Discard changes**.
@@ -827,7 +827,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
         SUM(Quantity) AS [(sum) Quantity]
     FROM
         OPENROWSET(
-            BULK 'https://asadatalake{SUFFIX}.dfs.core.windows.net/wwi-02/sale-small/Year=2010/Quarter=Q4/Month=12/Day=20101231/sale-small-20101231-snappy.parquet',
+            BULK 'https://{primarystoragaccount}.dfs.core.windows.net/wwi-02/sale-small/Year=2010/Quarter=Q4/Month=12/Day=20101231/sale-small-20101231-snappy.parquet',
             FORMAT='PARQUET'
         ) AS [r] GROUP BY r.TransactionDate, r.ProductId;
     ```
@@ -841,15 +841,14 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
         COUNT_BIG(*)
     FROM
         OPENROWSET(
-            BULK 'https://asadatalake{SUFFIX}.dfs.core.windows.net/wwi-02/sale-small/Year=2019/*/*/*/*',
+            BULK 'https://{Primarystorageaccount}.dfs.core.windows.net/wwi-02/sale-small/Year=2019/*/*/*/*',
             FORMAT='PARQUET'
         ) AS [r];
     ```
 
     > Notice how we updated the path to include all Parquet files in all subfolders of `sale-small/Year=2019`.
 
-    The output should be **339507246** records.
-
+    
 ### Task 2: Query sales Parquet data with Azure Synapse Spark
 
 1. Select **Data** from the left menu, select the **Linked** tab, then browse to the data lake storage account `asadatalake{SUFFIX}` to  **wwi-02/sale-small/Year=2010/Quarter=Q4/Month=12/Day=20101231**, then right-click the Parquet file and select **New notebook** then **Load to DataFrame**.
