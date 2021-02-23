@@ -807,13 +807,25 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
 2. From the **Data** blade, select the **Linked** tab.
 
-3. Expand **Azure Data Lake Storage Gen2**. Expand the `asadatalake{SUFFIX}` ADLS Gen2 account and select **wwi-02**.
+3. Expand **Azure Data Lake Storage Gen2**. Expand the `asadatalake{SUFFIX}` ADLS Gen2 account and select **sales**.
 
-4. Navigate to the **wwi-02/sale-small/Year=2010/Quarter=Q4/Month=12/Day=20101231** folder. Right-click on the **sale-small-20101231-snappy.parquet** file, select **New SQL script**, then **Select TOP 100 rows**.
+4. Right click on one of the parquet file and select Top 100. The query should seem something similar
 
-    ![The Storage accounts section is expanded with the context menu visible on the asadatalake{SUFFIX} account with the Select TOP 100 rows option highlighted.](media/data-hub-parquet-select-rows.png "Querying parquet data in SQL Serverless")
+ ```sql
+ 	SELECT
+    TOP 100 *
+FROM
+    OPENROWSET(
+        BULK 'https://{PrimaryWorkspace}.dfs.core.windows.net/synapsedemo/synapse/part-{randomid}.snappy.parquet',
+        FORMAT='PARQUET'
+    ) AS [result]
 
-5. Ensure the **Built-in** Synapse SQL Serverless pool is selected in the **Connect to** dropdown list above the query window, then run the query. Data is loaded by the Synapse SQL Serverless endpoint and processed as if was coming from any regular relational database.
+    ```
+
+
+    ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/top100.png "SQL on-demand")
+
+4. Ensure the **Built-in** Synapse SQL Serverless pool is selected in the **Connect to** dropdown list above the query window, then run the query. Data is loaded by the Synapse SQL Serverless endpoint and processed as if was coming from any regular relational database.
 
     ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
 
