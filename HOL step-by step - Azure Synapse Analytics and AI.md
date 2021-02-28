@@ -964,9 +964,9 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
 
  1. Open PowerBI Desktop in your workstation
  2. Click Get Data and select Azure | Azure SQL Database
- 3. In Servername , Enter **{WorkspaceName}--ondemand.sql.azuresynapse.net**, Database Name Enter **demo**
+ 3. In Servername , Enter **{WorkspaceName}--ondemand.sql.azuresynapse.net** and Database Name Enter **demo**
   ![The connect to option is highlighted in the query toolbar.](media/ondemand.PNG "Query toolbar")
- 5. Provide the user name use ogranizational account  ( demo lab account ) and login using the account.
+ 5. Provide the user name use Microsoft  account  ( demo lab account ) and login using the account Eg:synapsedemo01@outlook.com
  6. Under Preview section, select Sales and then load data.
   ![The connect to option is highlighted in the query toolbar.](media/salespreview.PNG "Query toolbar")
   7. Add a viuslization **card** and drag [ProfitAmount] . Select aggregate type as sum
