@@ -932,8 +932,9 @@ Once the spark pool is created, go back to the notebook, click refresh next to m
  9. Replace the saveAs table to default.sparksales
     ![The SQL script context menu item is highlighted.](media/sparksales.PNG "New SQL script")
  
- 10. Run the cell. Once completes, refresh default(spark). You would find a new table salesspark
- 11. Right click on salesspark and select New SQL --> select top 100. The query will run against the Synapse serverless.
+ 10. Run the cell. Once completes, refresh default(spark). You would find a new table salesspark.
+  ![The SQL script context menu item is highlighted.](media/selectsql.PNG "New SQL script")
+ 12. Right click on salesspark and select New SQL --> select top 100. The query will run against the Synapse serverless.
 
 This shows true interoperatbility between spark and synapse. You can also explore SQL table and load to spark dataframe to get more understanding on the cross operating functionality. 
     
