@@ -970,6 +970,7 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
  6. Click on advance and provide the query **select top 100000 * from sales** 
  7. Under Preview section, select Sales and then load data.
   ![The connect to option is highlighted in the query toolbar.](media/salespreview.PNG "Query toolbar")
+  8. Import wwi_mcw.CustomerInfo. Provide the dedicated Synapse Pool name and DB name. If you need help from instructor, raise hand. 
   7. Add a viuslization **card** and drag [ProfitAmount] . Select aggregate type as sum
   8. Publish the power BI report in your workspace ( In your tenant , not lab tenant)
    Preview section, select Sales and then load data.
