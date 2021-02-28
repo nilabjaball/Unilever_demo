@@ -996,28 +996,33 @@ Create Purview Account **OPTIONAL**
  You can use **DUMMY PURVIEW ACCOUNT**. Ask Instructor . Example : **purviewdummy**
  ### Task 2: Register and Scan
 0. Go  to azure portal. Go to your storage account ,  provide storage blob data contributor RBAC to PurviewMSI (purviewdummy) on your primary storage account.
-1. In Azure Portal, Search for **Purviewdemo**
-2. Lanuch Purview Studio.
-3. Once launched, click on register sources 
-4. Select Azure Data Lake Gen2
-5. Provide your synapse workspace primary storage, collection = New **YourName** and then register
-6. click new scan, select credential as Purview MSI, leave other options as default.
-7. Select schedule as once and then start the scan
+ ![The connect to option is highlighted in the query toolbar.](media/datacontrib.PNG "Query toolbar")
+2. In Azure Portal, Search for **Purviewdemo**
+3. Lanuch Purview Studio.
+4. Once launched, click on register sources 
+ ![The connect to option is highlighted in the query toolbar.](media/multiple.PNG "Query toolbar")
+6. Select Azure Data Lake Gen2
+7. Provide your synapse workspace primary storage, collection = New **YourName** and then register.
+8. click new scan, select credential as Purview MSI, leave other options as default.
+ ![The connect to option is highlighted in the query toolbar.](media/newscan.PNG "Query toolbar")
+10. Select schedule as once and then start the scan.
 
 ### Task 3: Link Synapse workspace to purview
 
 1.Go to Synapse worksapce --> Manage
 2.Click on Purview( Preview)
-3. Link the Purview account that you created in Task 1 or use dummy purview account 
+ ![The connect to option is highlighted in the query toolbar.](media/registerpurview.PNG "Query toolbar")
+4. Link the Purview account that you created in Task 1 or use dummy purview account 
  ![The connect to option is highlighted in the query toolbar.](media/purviewlink.PNG "Query toolbar")
 
 ### Task 4: Browse Catalog and explore 
-
+createlinkedservice.PNG
 1. Go to Synapse workspace
 2. Go to Data and on top search select Purview
-3. Type *
-4. Click on the dataset, search for Transaction*
-5. 5. Click spark partition - Click connect and register the linked service
+3. Click on the dataset, search for Transaction*
+5. Click spark partition - Click connect and register the linked service
+
+ ![The connect to option is highlighted in the query toolbar.](media/createlinkedservice.PNG "Query toolbar")
 
 
 ## After the hands-on lab
