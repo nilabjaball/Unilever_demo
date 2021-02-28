@@ -804,7 +804,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
 2. From the **Data** blade, select the **Linked** tab.
 
-3. Expand **Azure Data Lake Storage Gen2**. Expand the `asadatalake{SUFFIX}` ADLS Gen2 account and select **sales**.
+3. Expand **Azure Data Lake Storage Gen2**. Expand the **Primary Storage  ADLS Gen2 account** and select **sales**.
 
 4. Right click on one of the parquet file and select Top 100. The query should seem something similar
 
