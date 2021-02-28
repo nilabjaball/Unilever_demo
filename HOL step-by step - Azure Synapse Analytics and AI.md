@@ -925,7 +925,18 @@ Once the spark pool is created, go back to the notebook, click refresh next to m
     ```
 
  > We import required Python libraries to use aggregation functions and types defined in the schema to successfully execute the query.
- Monitoring
+ 
+ 8. Now go to the primary storage , sales folder, select all the parquet files, right click on the New Notebook --> New Spark table.
+   ![The SQL script context menu item is highlighted.](media/sparkload.PNG "New SQL script")
+ 
+ 9. Replace the saveAs table to default.sparksales
+    ![The SQL script context menu item is highlighted.](media/sparksales.PNG "New SQL script")
+ 
+ 10. Run the cell. Once completes, refresh default(spark). You would find a new table salesspark
+ 11. Right click on salesspark and select New SQL --> select top 100. The query will run against the Synapse serverless.
+
+This shows true interoperatbility between spark and synapse. You can also explore SQL table and load to spark dataframe to get more understanding on the cross operating functionality. 
+    
 ## Exercise 4: Publish PowerBI Report
 
 **Duration**: 30 minutes
