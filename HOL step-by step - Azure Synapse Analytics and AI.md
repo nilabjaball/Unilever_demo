@@ -970,11 +970,10 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
  6. Click on advance and provide the query **select top 100000 * from sales** 
  7. Under Preview section, select Sales and then load data.
   ![The connect to option is highlighted in the query toolbar.](media/salespreview.PNG "Query toolbar")
-  8. Import wwi_mcw.CustomerInfo. Provide the dedicated Synapse Pool name and DB name. If you need help from instructor, raise hand. 
-  7. Add a viuslization **card** and drag [ProfitAmount] . Select aggregate type as sum
-  8. Publish the power BI report in your workspace ( In your tenant , not lab tenant)
-   Preview section, select Sales and then load data.
-  ![The connect to option is highlighted in the query toolbar.](media/card.PNG "Query toolbar")
+  8. Optional,Import wwi_mcw.CustomerInfo. Provide the dedicated Synapse Pool name and DB name. If you need help from instructor, raise hand.  This is to prove that you can blend serverless and dedicated pool.
+  9. Add a viuslization **card** and drag [ProfitAmount] . Select aggregate type as sum
+  10. Publish the power BI report in your workspace ( In your tenant , not lab tenant)
+
 
 
 ## Exercise 5:  Purview (Optional)
@@ -986,7 +985,7 @@ Duration : 20 mins
 
 **Register Microsoft.Storage and Microsoft.Eventhub**
 
-Create Purview Account
+Create Purview Account **OPTIONAL**
 
 1. Go to Azure Portal -->  Create New  Resource and enter Azure Purview
 2. Provide the purview name, resource group name and region
@@ -994,24 +993,32 @@ Create Purview Account
 
  ![The connect to option is highlighted in the query toolbar.](media/purview.PNG "Query toolbar")
  
- You can use **DUMMY PURVIEW ACCOUNT**. Ask Instructor 
+ You can use **DUMMY PURVIEW ACCOUNT**. Ask Instructor . Example : **purviewdummy**
+ ### Task 2: Register and Scan
+0. Go  to azure portal. Go to your storage account ,  provide storage blob data contributor RBAC to PurviewMSI (purviewdummy) on your primary storage account.
+1. In Azure Portal, Search for **Purviewdemo**
+2. Lanuch Purview Studio.
+3. Once launched, click on register sources 
+4. Select Azure Data Lake Gen2
+5. Provide your synapse workspace primary storage, collection = New **YourName** and then register
+6. click new scan, select credential as Purview MSI, leave other options as default.
+7. Select schedule as once and then start the scan
 
-### Task 2: Link Synapse workspace to purview
+### Task 3: Link Synapse workspace to purview
 
 1.Go to Synapse worksapce --> Manage
 2.Click on Purview( Preview)
 3. Link the Purview account that you created in Task 1 or use dummy purview account 
  ![The connect to option is highlighted in the query toolbar.](media/purviewlink.PNG "Query toolbar")
 
-### Task 3: Browse Catalog and explore 
+### Task 4: Browse Catalog and explore 
 
 1. Go to Synapse workspace
 2. Go to Data and on top search select Purview
 3. Type *
-4. Click on the dataset (casrprice.csv)
-5. Click Develop - Select SQL
- ![The connect to option is highlighted in the query toolbar.](media/synapselinkpurview.PNG "Query toolbar")
-7. Run query to view the data 
+4. Click on the dataset, search for Transaction*
+5. 5. Click spark partition - Click connect and register the linked service
+
 
 ## After the hands-on lab
 
