@@ -826,7 +826,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
     ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
 
-6. Modify the SQL query to perform aggregates and grouping operations to better understand the data. Replace the query with the following, making sure that the file path in **OPENROWSET** matches your current file path, be sure to substitute `asadatalake{SUFFIX}` for the appropriate value in your environment:
+6. Modify the SQL query to perform aggregates and grouping operations to better understand the data. Replace the query with the following, making sure that the file path in **OPENROWSET** matches your current file path, be sure to substitute **primary storage account**, **primary filed system name** and **partfile name** for the appropriate value in your environment:
 
     ```sql
     SELECT
@@ -836,7 +836,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
         SUM(Quantity) AS [(sum) Quantity]
     FROM
         OPENROWSET(
-            BULK 'https://{primarystoragaccount}.dfs.core.windows.net/{FilesystemName}/sales/{randomid}.snappy.parquet',
+            BULK 'https://{primarystoragaccount}.dfs.core.windows.net/{FilesystemName}/sales/{partfilename}.snappy.parquet',
             FORMAT='PARQUET'
         ) AS [r] GROUP BY r.TransactionDate, r.ProductId;
     ```
