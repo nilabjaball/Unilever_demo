@@ -970,8 +970,8 @@ PowerBI can connect to synapse serverless and import data to the workspace to ge
  6. Click on advance and provide the query **select top 100000 * from sales** 
  7. Under Preview section, select Sales and then load data.
   ![The connect to option is highlighted in the query toolbar.](media/salespreview.PNG "Query toolbar")
-  8. Optional,Import wwi_mcw.CustomerInfo. Provide the dedicated Synapse Pool name and DB name. If you need help from instructor, raise hand.  This is to prove that you can blend serverless and dedicated pool.
-  9. Add a viuslization **card** and drag [ProfitAmount] . Select aggregate type as sum
+  8. **Optional** Import wwi_mcw.CustomerInfo. Provide the dedicated Synapse Pool name and DB name. If you need help from instructor, raise hand.  This is to prove that you can blend serverless and dedicated pool.
+  9. Add a visulization **card** and drag [ProfitAmount] . Select aggregate type as sum
   10. Publish the power BI report in your workspace ( In your tenant , not lab tenant)
 
 
@@ -998,7 +998,7 @@ Create Purview Account **OPTIONAL**
 0. Go  to azure portal. Go to your storage account ,  provide storage blob data contributor RBAC to PurviewMSI (purviewdummy) on your primary storage account.
  ![The connect to option is highlighted in the query toolbar.](media/datacontrib.PNG "Query toolbar")
 2. In Azure Portal, Search for **Purviewdemo**
-3. Lanuch Purview Studio.
+3. Launch Purview Studio.
 4. Once launched, click on register sources 
  ![The connect to option is highlighted in the query toolbar.](media/multiple.PNG "Query toolbar")
 6. Select Azure Data Lake Gen2
@@ -1011,9 +1011,12 @@ Create Purview Account **OPTIONAL**
 
 1.Go to Synapse worksapce --> Manage
 2.Click on Purview( Preview)
+![The connect to option is highlighted in the query toolbar.](media/purviewlink.PNG "Query toolbar")
+
+
  ![The connect to option is highlighted in the query toolbar.](media/registerpurview.PNG "Query toolbar")
-4. Link the Purview account that you created in Task 1 or use dummy purview account 
- ![The connect to option is highlighted in the query toolbar.](media/purviewlink.PNG "Query toolbar")
+3. Link the Purview account that you created in Task 1 or use dummy purview account 
+ 
 
 ### Task 4: Browse Catalog and explore 
 createlinkedservice.PNG
