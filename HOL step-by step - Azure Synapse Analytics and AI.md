@@ -865,7 +865,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
 2. This will generate a notebook with PySpark code to load the data in a dataframe and display 100 rows with the header.
 
-3. Attach the notebook to a Spark pool. For that first, you need to create a spark pool.So, click on managed pool 
+3. Attach the notebook to a Spark pool. For that first, you need to create a spark pool.So, click on managed pool . Provide a unique spark pool name.
 
     ![The Spark pool list is displayed.](media/mpool.PNG "Attach to Spark pool")
     
@@ -874,7 +874,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
    ![The Spark pool list is displayed.](media/sparksettings.PNG "Attach to Spark pool")
 Once the spark pool is created, go back to the notebook, click refresh next to managed pool, select the newly created pool and then run the python code.
 
-4. Select **Run all** on the notebook toolbar to execute the notebook.
+4. Go back to Data and select the newly created pool. Select **Run all** on the notebook toolbar to execute the notebook.
 
     > **Note:** The first time you run a notebook in a Spark pool, Synapse creates a new session. This can take approximately 5 minutes.
     
