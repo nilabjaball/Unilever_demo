@@ -863,7 +863,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
     ![The Parquet file is displayed with the New notebook and Load to DataFrame menu items highlighted.](media/df.PNG "New notebook")
 
-2. This will generate a notebook with PySpark code to load the data in a dataframe and display 100 rows with the header.
+2. This will generate a notebook with PySpark code to load the data in a dataframe and display 10 rows with the header.
 
 3. Attach the notebook to a Spark pool. For that first, you need to create a spark pool.So, click on managed pool . Provide a unique spark pool name.
 
